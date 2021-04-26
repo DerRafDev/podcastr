@@ -1,6 +1,6 @@
 # Podcastr
 
-This Application is a Podcast Website where you can play the podcast, stop it, shuffle it or go to the next episode, you can also click on the Podcast and read about it.
+This Application is a Podcast Website created using Next.js, Typescript, and Sass. Where you can play the podcast, stop it, shuffle it or go to the next episode, control the time with the slider and you can also click on the Podcast and read about it.
 
 ## Techologies 🚀
 
@@ -26,7 +26,7 @@ And to start the application:
 ## Result 🖥️
 
 ### Main Page
-![alt text]()
+![alt text](https://github.com/DerRafDev/podcastr/blob/main/github/project-look.png)
 
 ## Contact 📞
 Created by [@DerRaf](https://www.linkedin.com/in/rafael-sordi/) - feel free to contact me!
