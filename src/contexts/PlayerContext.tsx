@@ -22,6 +22,7 @@ type PlayerContextData = {
     toggleShuffle: () => void;
     playNext: () => void;
     playPrevious: () => void;
+    clearPlayerState: () => void;
     hasPrevious: boolean;
     hasNext: boolean;
 };
@@ -73,9 +74,14 @@ export function PlayerContextProvider({ children }: PlayerContextProviderProps) 
       setIsPlaying(state);
     }
 
+    function clearPlayerState() {
+        setEpisodeList([]);
+        setCurrentEpisodeIndex(0);
+    }
+
     //this is for disabled the button when he have no next episode or previous
     const hasPrevious = currentEpisodeIndex > 0;
-    const hasNext = (currentEpisodeIndex + 1) < episodeList.length;
+    const hasNext = isShuffling || (currentEpisodeIndex + 1) < episodeList.length;
 
 
     //this is for the button Next Episode
@@ -114,7 +120,8 @@ export function PlayerContextProvider({ children }: PlayerContextProviderProps) 
                 hasPrevious,
                 hasNext,
                 toggleLoop,
-                toggleShuffle
+                toggleShuffle,
+                clearPlayerState
             }}
         >
             {children}
